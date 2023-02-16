@@ -10,4 +10,6 @@ use Illuminate\Database\Eloquent\Collection;
 interface EmployeeRepositoryInterface
 {
     public function findActiveByDepartment(Department $department): Collection;
+    public function blockEmployeeByDepartment(Department $department): string;
+    
 }
