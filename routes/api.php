@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('/departments')->group(function (): void {
-    Route::prefix('/{id}')->group(function (): void {
+    Route::prefix('/{department}')->group(function (): void {
         Route::get('/active-employees', [DepartmentController::class, 'getActiveEmployees']);
         Route::post('/block-employees', [DepartmentController::class, 'blockEmployees']);
     });
